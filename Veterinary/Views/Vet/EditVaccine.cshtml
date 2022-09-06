@@ -1,0 +1,35 @@
+﻿@model Veterinary.Models.Vaccine
+
+<form method="post" asp-action="EditVaccine">
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary">
+				Edit Vaccine
+			</h2>
+		</div>
+		<!--All validation errors are here: <div asp-validation-summary="All"></div>-->
+		<div class="mb-3">
+			<label asp-for="Name">Name</label>
+			<input asp-for="Name" class="form-control"/>
+			<span asp-validation-for="Name" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="VaccinationDate">Vaccination Date</label>
+			<input asp-for="VaccinationDate" class="form-control"/>
+			<span asp-validation-for="VaccinationDate" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="NextVaccinationDate">Next Vaccination Date</label>
+			<input asp-for="NextVaccinationDate" class="form-control"/>
+			<span asp-validation-for="NextVaccinationDate" class="text-danger"></span>
+		</div>
+		<button type="submit" class="btn btn-primary" style="width:150px">Update</button>
+		<a href="javascript: history.go(-1)" class="btn btn-secondary">Go Back</a>
+	</div>
+</form>
+
+@*@section Scripts{
+	@{
+		<partial name="_ValidationScriptsPartial"></partial>
+	}
+}*@

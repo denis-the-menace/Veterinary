@@ -1,0 +1,12 @@
+﻿@{
+    string CurrentControllerName = ViewContext.RouteData.Values["controller"].ToString();
+    switch (CurrentControllerName) 
+    { 
+        case "Vet":
+            Layout = "_AuthorizedLayout"; 
+            break; 
+        default:
+            Layout = "_Layout"; 
+            break; 
+    } 
+}

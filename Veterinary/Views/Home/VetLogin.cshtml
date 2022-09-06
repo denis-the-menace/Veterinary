@@ -1,0 +1,15 @@
+﻿@model Veterinary.Models.VetLoginVM
+
+<h1>Veterinary Login</h1>
+<form method="post" asp-action="LoginPost">
+  <div class="mb-3">
+    <label asp-for="Email" class="form-label">Email Address</label>
+    <input asp-for="Email" type="email" class="form-control" id="Email">
+  </div>
+  <div class="mb-3">
+    <label asp-for="Password" class="form-label">Password</label>
+    <input asp-for="Password" type="password" class="form-control" id="Password">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <a asp-controller="Home" asp-action="Register" class="btn btn-secondary" style="">Not registered yet?</a>
+</form>

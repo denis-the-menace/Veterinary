@@ -1,0 +1,19 @@
+﻿@model Veterinary.Models.Owner
+
+<h1>Add Client</h1>
+<form method="post" action="AddClient">
+	<div class="mb-3">
+    <label asp-for="Name" class="form-label">Name</label>
+    <input asp-for="Name" type="text" class="form-control" id="Name">
+  </div>
+  <div class="mb-3">
+    <label asp-for="Surname" class="form-label">Surname</label>
+    <input asp-for="Surname" type="text" class="form-control" id="Surname">
+  </div>
+    <div class="mb-3">
+    <label asp-for="Email" class="form-label">Email Address</label>
+    <input asp-for="Email" type="text" class="form-control" id="Email">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <a href="javascript: history.go(-1)" class="btn btn-secondary">Go Back</a>
+</form>

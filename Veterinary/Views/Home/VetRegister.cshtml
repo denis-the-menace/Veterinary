@@ -1,0 +1,25 @@
+﻿@model Veterinary.Models.VetRegisterVM
+
+<h1>Veterinary Register</h1>
+<form method="post" action="Register">
+    <div class="mb-3">
+    <label asp-for="Name" class="form-label">Name</label>
+    <input asp-for="Name" type="text" class="form-control" id="Name">
+  </div>
+  <div class="mb-3">
+    <label asp-for="Surname" class="form-label">Surname</label>
+    <input asp-for="Surname" type="text" class="form-control" id="Surname">
+  </div>
+	<div class="mb-3">
+    <label asp-for="Email" class="form-label">Email Address</label>
+    <input asp-for="Email" type="email" class="form-control" id="Email" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label asp-for="Password" class="form-label">Password</label>
+    <input asp-for="Password" type="password" class="form-control" id="Password">
+  </div>
+  @*CONFIRM PASSWORD EKLE*@
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <a asp-controller="Home" asp-action="Login" class="btn btn-secondary" style="">Already have an account?</a>
+</form>

@@ -1,0 +1,42 @@
+﻿@model Veterinary.Models.Pet
+
+<h1>Add Pet</h1>
+<form method="post" action="AddPet">
+	<div class="mb-3">
+    <label asp-for="Name" class="form-label">Name</label>
+    <input asp-for="Name" type="text" class="form-control" id="Name">
+  </div>
+  <div class="mb-3">
+    <label asp-for="Birthdate" class="form-label">Birthdate</label>
+    <input asp-for="Birthdate" type="date" class="form-control" id="Birthdate">
+  </div>
+    <div class="mb-3">
+        <label asp-for="Type" class="form-label">Type</label>
+        <select asp-for="Type" class="form-select">
+  <option selected value="0">Cat</option>
+  <option value="1">Dog</option>
+  <option value="2">Bunny</option>
+  <option value="3">Bird</option>
+</select>
+  </div>
+  <div class="mb-3">
+    <label asp-for="Color" class="form-label">Color</label>
+    <input asp-for="Color" type="text" class="form-control" id="Color">
+  </div>
+  <div class="mb-3">
+      <label asp-for="Gender" class="form-label">Gender</label>
+      <select asp-for="Gender" class="form-select">
+  <option selected value="m">Male</option>
+  <option value="f">Female</option>
+  </select>
+  </div>
+  <div class="mb-3">
+     <label asp-for="Neutered" class="form-label">Neutered</label> 
+      <select asp-for="Neutered" class="form-select">
+    <option selected value="false">No</option>
+    <option  value="true">Yes</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <a href="javascript: history.go(-1)" class="btn btn-secondary">Go Back</a>
+</form>

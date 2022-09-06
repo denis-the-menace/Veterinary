@@ -1,0 +1,19 @@
+﻿@model Veterinary.Models.Operation
+
+<h1>Add Vaccine</h1>
+<form method="post" action="AddPetOperation">
+	<div class="mb-3">
+    <label asp-for="Name" class="form-label">Name</label>
+    <select asp-for="Name" class="form-select">
+  <option selected value="0">Neuter</option>
+  <option value="1">Abdominal Procedure For Foreign Body</option>
+  <option value="2">Fracture Repair</option>      
+  </select>
+  </div>
+  <div class="mb-3">
+    <label asp-for="OperationDate" class="form-label">Operation Date</label>
+    <input asp-for="OperationDate" type="date" class="form-control" id="OperationDate">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <a href="javascript: history.go(-1)" class="btn btn-secondary">Go Back</a>
+  </form>
