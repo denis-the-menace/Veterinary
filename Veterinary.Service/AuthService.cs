@@ -49,8 +49,7 @@ namespace Veterinary.Service
                 Name = request.Name,
                 Surname = request.Surname,
                 Email = request.Email,
-                PasswordHash = passwordHash,
-                PasswordSalt = passwordSalt,
+                PasswordHash = passwordHash
             };
             
             await _service.InsertVetAsync(vet);
